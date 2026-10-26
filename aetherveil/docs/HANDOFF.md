@@ -34,3 +34,9 @@
 
 ## Next steps
 1. Supply spec + key art; build the ledger. 2. Headless-browser smoke test (Playwright). 3. glTF loader + asset manifest. 4. ECS refactor. 5. Combat, then vehicles.
+
+## Session 2
+- Re-checked: requirements TXT and key art are STILL absent from the repo and the filesystem.
+- Added tools/smoke.mjs (Playwright: boots the game, walks, checks the HUD, screenshots, fails on page errors) and `npm run smoke`.
+- **Blocked:** Chromium downloads but will not launch (libglib-2.0.so.0 missing). There is no root or sudo, and `playwright install-deps` fails. The smoke test has NEVER run, so runtime verification is still outstanding.
+- Next action: run `npm run smoke` on a machine with browser libraries (or install them), then fix whatever it finds. Provide the spec and art.
