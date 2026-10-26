@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Aetherveil</title>
+<style>
+html,body{margin:0;height:100%;background:#05030c;color:#cfe;font:14px system-ui,sans-serif;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none}
+canvas{display:block}
+#load,#err{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#05030c;z-index:20;text-align:center;padding:20px}
+#err{display:none;color:#f68}
+#bar{width:240px;height:4px;background:#222;margin-top:12px}#bar i{display:block;height:100%;width:0;background:#0ff}
+#hud{position:fixed;top:8px;left:8px;right:8px;display:flex;justify-content:space-between;pointer-events:none;text-shadow:0 0 6px #0ff}
+#prompt{position:fixed;bottom:30%;width:100%;text-align:center;font-size:18px;color:#ff0;text-shadow:0 0 8px #f0f;pointer-events:none}
+#settings{position:fixed;top:40px;right:8px;background:#000a;padding:8px;border:1px solid #0ff6;display:none;z-index:10}
+#settings label{display:block;margin:4px 0}
+button{background:#102;color:#0ff;border:1px solid #0ff;padding:8px 12px;font-size:14px}
+#gear{position:fixed;top:36px;right:8px;z-index:11}
+#joy{position:fixed;left:24px;bottom:24px;width:120px;height:120px;border-radius:50%;border:2px solid #0ff6;display:none}
+#joy i{position:absolute;left:40px;top:40px;width:40px;height:40px;border-radius:50%;background:#0ff6}
+#btns{position:fixed;right:20px;bottom:24px;display:none;gap:10px}
+</style></head><body>
+<div id="load"><h1>AETHERVEIL</h1><div id="msg">Booting…</div><div id="bar"><i></i></div></div>
+<div id="err"></div>
+<div id="hud"><span id="h1"></span><span id="h2"></span></div>
+<div id="prompt"></div>
+<button id="gear">⚙</button>
+<div id="settings">
+<label>Quality <select id="q"><option>low</option><option>medium</option><option>high</option></select></label>
+<label>Resolution <input id="rs" type="range" min="0.5" max="2" step="0.1"></label>
+<label>Bloom <input id="bl" type="checkbox"></label>
+<label>Reduced motion <input id="rm" type="checkbox"></label>
+<button id="exp">Export save</button>
+</div>
+<div id="joy"><i></i></div>
+<div id="btns"><button id="bJump">Jump</button><button id="bAct">Use</button></div>
+<script type="module" src="/src/game/main.ts"></script></body></html>
